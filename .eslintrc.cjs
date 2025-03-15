@@ -10,7 +10,7 @@ module.exports = {
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
   ],
-  ignorePatterns: ['.eslintrc.cjs'],
+  ignorePatterns: ['.eslintrc.cjs', 'scripts'],
   plugins: ['import', 'jsx-a11y', 'react', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {

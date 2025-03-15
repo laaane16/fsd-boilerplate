@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports, no-undef */
 const fs = require('fs');
 const path = require('path');
 
@@ -10,7 +9,10 @@ const createFile = (path, data = '') => {
   fs.writeFileSync(path, data);
 };
 
-const getReduxSliceFileData = (prepareSliceName, sliceNameLowerCase) => `import { createSlice } from '@reduxjs/toolkit';
+const getReduxSliceFileData = (
+  prepareSliceName,
+  sliceNameLowerCase,
+) => `import { createSlice } from '@reduxjs/toolkit';
 
 import { ${prepareSliceName}Schema } from '../types/${prepareSliceName}Schema';
 
@@ -65,7 +67,10 @@ const createModelSegment = (sliceDirPath, prepareSliceName, sliceNameLowerCase) 
 
   const reduxSliceDirPath = path.resolve(modelDirPath, 'slice');
   const reduxSliceFilePath = path.resolve(reduxSliceDirPath, sliceNameLowerCase + 'Slice.tsx');
-  const reduxSliceTestFilePath = path.resolve(reduxSliceDirPath, sliceNameLowerCase + 'Slice.test.tsx');
+  const reduxSliceTestFilePath = path.resolve(
+    reduxSliceDirPath,
+    sliceNameLowerCase + 'Slice.test.tsx',
+  );
 
   const typesDirPath = path.resolve(modelDirPath, 'types');
   const typesSchemaFilePath = path.resolve(typesDirPath, prepareSliceName + 'Schema.tsx');
