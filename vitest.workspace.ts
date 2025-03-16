@@ -18,15 +18,15 @@ export default defineWorkspace([
       // See options at: https://storybook.js.org/docs/writing-tests/test-addon#storybooktest
       storybookTest({ configDir: path.join(dirname, '.storybook') }),
     ],
-    // test: {
-    //   name: 'storybook',
-    //   browser: {
-    //     enabled: true,
-    //     headless: true,
-    //     name: 'chromium',
-    //     provider: 'cypress',
-    //   },
-    //   setupFiles: ['.storybook/vitest.setup.ts'],
-    // },
+    test: {
+      name: 'storybook',
+      browser: {
+        enabled: true,
+        headless: true,
+        name: 'chromium',
+        provider: 'cypress',
+      },
+      setupFiles: ['.storybook/vitest.setup.ts'],
+    },
   },
 ]);

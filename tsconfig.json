@@ -1,29 +1,31 @@
 {
   "compilerOptions": {
-    /* Language and Environment */
-    "target": "esnext",
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "allowJs": false,
+    "esModuleInterop": false,
     "jsx": "react-jsx",
-    "experimentalDecorators": true,
 
-    /* Modules */
-    "module": "es2020",
-    "moduleResolution": "node",
-
-    /* Emit */
-    "sourceMap": true,
-
-    /* Interop Constraints */
-    "esModuleInterop": true,
-
-    /* Type Checking */
+    /* Linting */
     "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
 
-    /* Completeness */
-    "skipLibCheck": true
+    "types": ["vite/client", "vitest/globals"]
   },
-  "include": ["./**/*.ts", "./**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
