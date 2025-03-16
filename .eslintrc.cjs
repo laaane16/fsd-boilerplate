@@ -62,12 +62,7 @@ module.exports = {
       },
     ],
 
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: true,
-      },
-    ],
+    'import/no-extraneous-dependencies': 'off',
 
     'prettier/prettier': [
       'warn',
