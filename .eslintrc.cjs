@@ -6,9 +6,9 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb-typescript',
-    'prettier',
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
+    'prettier',
   ],
   plugins: ['import', 'jsx-a11y', 'react', 'prettier'],
   parser: '@typescript-eslint/parser',
@@ -54,6 +54,8 @@ module.exports = {
     ],
 
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/require-default-props': 'off',
     'react/function-component-definition': [
       2,
       {
@@ -62,6 +64,11 @@ module.exports = {
     ],
 
     'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
+
+    '@typescript-eslint/no-unused-vars': 'warn',
+
+    'import/order': 'off',
 
     'prettier/prettier': [
       'warn',
@@ -69,5 +76,12 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: './tsconfig.json',
+      },
+    },
   },
 };
