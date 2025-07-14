@@ -13,7 +13,7 @@ module.exports = {
   plugins: ['import', 'jsx-a11y', 'react', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json',
+    tsconfigRootDir: __dirname,
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
