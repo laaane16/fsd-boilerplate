@@ -63,7 +63,7 @@
     "loki": "^0.35.1",
     "prettier": "^3.5.3",
     "sass": "^1.85.1",
-    "storybook": "^8.6.6",
+    "storybook": "^8.6.15",
     "stylelint": "^16.16.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-prettier": "^5.0.3",
